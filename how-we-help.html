@@ -1,0 +1,1532 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How We Help | Pallium Construction Accountants</title>
+  <meta name="description" content="Construction accounting, project profitability, cash flow forecasting, tax planning and financial advisory for construction businesses.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================
+       GLOBAL
+    ========================================= */
+
+    :root {
+      --navy: #173345;
+      --navy-dark: #102b3b;
+      --blue: #087b9f;
+      --blue-dark: #056380;
+      --sky: #a9dbe8;
+      --ivory: #faf9f6;
+      --light: #f4f8fa;
+      --text: #26343b;
+      --muted: #62717a;
+      --border: #e0e8eb;
+
+      --heading: "Manrope", sans-serif;
+      --body: "DM Sans", sans-serif;
+
+      --container: 1360px;
+      --gutter: clamp(22px, 5vw, 80px);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text);
+      font-family: var(--body);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, p {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(
+        calc(100% - var(--gutter) * 2),
+        var(--container)
+      );
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-family: var(--heading);
+      font-size: clamp(32px, 3.2vw, 46px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       BUTTONS
+    ========================================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 26px;
+      border: 1.5px solid transparent;
+      border-radius: 0;
+      font-family: var(--body);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+      border-color: var(--blue-dark);
+    }
+
+    .btn-white {
+      background: #fff;
+      border-color: #fff;
+      color: var(--navy);
+    }
+
+    .btn-white:hover {
+      background: var(--sky);
+      border-color: var(--sky);
+    }
+
+    /* =========================================
+       TOP BAR
+    ========================================= */
+
+    .topbar {
+      background: var(--navy-dark);
+      color: rgba(255, 255, 255, .85);
+      font-size: 12px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 35px;
+    }
+
+    .topbar-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .topbar a:hover {
+      color: var(--sky);
+    }
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .97);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .2s ease;
+    }
+
+    .header.scrolled {
+      box-shadow: 0 8px 30px rgba(16, 43, 59, .07);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      min-height: 100px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: auto;
+      height: 85px;
+      max-width: 240px;
+      object-fit: contain;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2vw, 30px);
+      margin-left: auto;
+    }
+
+    .nav > a:not(.nav-mobile-cta) {
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav > a:hover,
+    .nav > a.active {
+      color: var(--blue);
+    }
+
+    .header-actions {
+      flex-shrink: 0;
+      padding-left: 22px;
+      border-left: 1px solid var(--border);
+    }
+
+    .header-actions .btn {
+      min-height: 48px;
+      padding-inline: 18px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .menu-toggle,
+    .nav-mobile-cta {
+      display: none;
+    }
+
+    .menu-toggle {
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      margin-left: auto;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--navy);
+      font-size: 24px;
+    }
+
+    /* =========================================
+       PAGE HERO
+    ========================================= */
+
+    .page-hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(16, 43, 59, .98) 0%,
+          rgba(16, 43, 59, .94) 45%,
+          rgba(16, 43, 59, .65) 100%
+        ),
+        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+    }
+
+    .page-hero-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 340px;
+      padding: 60px 0 70px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 26px;
+      color: rgba(255, 255, 255, .7);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .breadcrumb span:last-child {
+      color: var(--sky);
+    }
+
+    .page-hero h1 {
+      color: #fff;
+      font-family: var(--heading);
+      font-size: clamp(40px, 4vw, 58px);
+      font-weight: 800;
+      line-height: 1.13;
+      letter-spacing: -.05em;
+    }
+
+    .page-hero p {
+      max-width: 680px;
+      margin-top: 22px;
+      color: #d7e3e9;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       INTRODUCTION
+    ========================================= */
+
+    .intro-section {
+      padding: clamp(76px, 8vw, 115px) 0;
+      background: #fff;
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: start;
+      gap: clamp(40px, 7vw, 110px);
+    }
+
+    .intro-heading .eyebrow {
+      margin-bottom: 20px;
+    }
+
+    .intro-heading h2 {
+      max-width: 530px;
+    }
+
+    .intro-content {
+      max-width: 630px;
+      padding-top: 25px;
+    }
+
+    .intro-content p + p {
+      margin-top: 18px;
+    }
+
+    /* =========================================
+       SERVICES — CLEAN CARDS
+    ========================================= */
+
+    .services {
+      padding: clamp(76px, 8vw, 115px) 0;
+      background: var(--light);
+    }
+
+    .services-heading {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .services-heading .eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .services-heading .section-description {
+      max-width: 610px;
+      margin-top: 18px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 335px;
+      padding: 34px 32px 32px;
+      background: #fff;
+      border: 1px solid #dce7ec;
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      border-color: #b9d1dc;
+      box-shadow: 0 12px 30px rgba(23, 51, 69, .065);
+    }
+
+    .service-number {
+      display: block;
+      color: var(--blue);
+      font-family: var(--heading);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      line-height: 1.5;
+    }
+
+    .service-card h3 {
+      max-width: 100%;
+      margin-top: 24px;
+      color: var(--navy);
+      font-family: var(--heading);
+      font-size: clamp(21px, 1.65vw, 25px);
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -.04em;
+    }
+
+    .service-card p {
+      max-width: 100%;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .service-card .text-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      min-height: 48px;
+      margin-top: auto;
+      padding: 0 22px;
+      background: transparent;
+      border: 1.5px solid var(--blue);
+      border-radius: 0;
+      color: var(--blue);
+      font-family: var(--body);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      white-space: nowrap;
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+    }
+
+    .service-card .text-link:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    /* =========================================
+       FINANCIAL INTELLIGENCE
+    ========================================= */
+
+    .feature-section {
+      padding: clamp(76px, 8vw, 115px) 0;
+      background: #fff;
+    }
+
+    .feature-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(45px, 7vw, 110px);
+    }
+
+    .feature-visual img {
+      width: 100%;
+      height: clamp(390px, 36vw, 520px);
+      object-fit: cover;
+    }
+
+    .feature-content {
+      max-width: 580px;
+    }
+
+    .feature-content .eyebrow {
+      margin-bottom: 20px;
+    }
+
+    .feature-content .section-description {
+      margin-top: 24px;
+    }
+
+    .feature-points {
+      display: grid;
+      gap: 18px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .feature-points li::before {
+      content: "";
+      flex: 0 0 8px;
+      width: 8px;
+      height: 8px;
+      margin-top: 8px;
+      background: var(--blue);
+    }
+
+    /* =========================================
+       OUR APPROACH — VERTICAL DIVIDERS
+    ========================================= */
+
+    .approach {
+      padding: 85px 0 95px;
+      background: var(--ivory);
+    }
+
+    .approach-heading {
+      max-width: 850px;
+      margin-bottom: 48px;
+    }
+
+    .approach-heading .eyebrow {
+      margin-bottom: 15px;
+    }
+
+    .approach-heading .section-title {
+      max-width: 780px;
+      font-size: clamp(32px, 3.2vw, 44px);
+      line-height: 1.2;
+    }
+
+    .approach-heading .section-description {
+      max-width: 680px;
+      margin-top: 19px;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .approach-step {
+      min-width: 0;
+      padding: 6px 36px 8px 0;
+      border: none;
+    }
+
+    /* Vertical divider between steps */
+    .approach-step + .approach-step {
+      border-left: 1px solid #dce7ec;
+      padding-left: 36px;
+    }
+
+    .step-number {
+      display: block;
+      color: var(--blue);
+      font-family: var(--heading);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .07em;
+      line-height: 1.5;
+    }
+
+    .approach-step h3 {
+      margin-top: 22px;
+      color: var(--navy);
+      font-family: var(--heading);
+      font-size: clamp(20px, 1.65vw, 24px);
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -.035em;
+    }
+
+    .approach-step p {
+      max-width: 355px;
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       FINAL CTA
+    ========================================= */
+
+    .final-cta {
+      padding: clamp(76px, 8vw, 115px) 0;
+      background: #fff;
+    }
+
+    .cta-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 45px;
+      padding: clamp(45px, 5vw, 75px);
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .cta-content {
+      max-width: 720px;
+    }
+
+    .cta-content .eyebrow {
+      color: var(--sky);
+    }
+
+    .cta-content h2 {
+      margin-top: 18px;
+      color: #fff;
+      font-family: var(--heading);
+      font-size: clamp(30px, 3vw, 43px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+
+    .cta-content p {
+      max-width: 580px;
+      margin-top: 20px;
+      color: #d1dfe5;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .cta-panel .btn {
+      flex-shrink: 0;
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    .footer {
+      padding: 72px 0 28px;
+      background: var(--navy-dark);
+      color: #c1cfd6;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: clamp(30px, 5vw, 70px);
+    }
+
+    .footer-logo {
+      width: auto;
+      height: 72px;
+      max-width: 200px;
+      object-fit: contain;
+      padding: 6px;
+      background: #fff;
+    }
+
+    .footer-about {
+      max-width: 340px;
+      margin-top: 24px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer h4 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .footer ul {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .footer ul a:hover {
+      color: var(--sky);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, .13);
+      color: #9fb1bb;
+      font-size: 12px;
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 1200px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .header-actions {
+        display: none;
+      }
+
+      .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 15px var(--gutter) 28px;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 18px 28px rgba(0, 0, 0, .08);
+        max-height: calc(100svh - 100px);
+        overflow-y: auto;
+      }
+
+      .nav.is-open {
+        display: flex;
+      }
+
+      .nav > a:not(.nav-mobile-cta) {
+        padding: 17px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 16px;
+      }
+
+      .nav .nav-mobile-cta {
+        display: flex;
+        margin-top: 20px;
+        background: var(--blue);
+        color: #fff;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 960px) {
+      .intro-layout,
+      .feature-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .intro-content {
+        padding-top: 0;
+      }
+
+      .feature-visual,
+      .feature-content {
+        max-width: 760px;
+      }
+
+      .feature-visual img {
+        height: 420px;
+      }
+
+      .approach-step {
+        padding-right: 22px;
+      }
+
+      .approach-step + .approach-step {
+        padding-left: 22px;
+      }
+
+      .cta-panel {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .topbar {
+        display: none;
+      }
+
+      .header-inner {
+        min-height: 78px;
+      }
+
+      .logo img {
+        height: 68px;
+        max-width: 185px;
+      }
+
+      .page-hero-inner {
+        min-height: 290px;
+        padding-block: 50px;
+      }
+
+      .page-hero h1 {
+        font-size: clamp(36px, 9vw, 46px);
+      }
+
+      .page-hero p {
+        font-size: 15px;
+      }
+
+      .intro-section,
+      .services,
+      .feature-section,
+      .final-cta {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        font-size: clamp(30px, 8vw, 39px);
+      }
+
+      .section-description {
+        font-size: 15px;
+      }
+
+      .services-heading {
+        margin-bottom: 32px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .service-card {
+        min-height: 0;
+        padding: 29px 25px;
+      }
+
+      .service-card h3 {
+        margin-top: 22px;
+        font-size: 23px;
+      }
+
+      .service-card .text-link {
+        width: 100%;
+        margin-top: 27px;
+      }
+
+      .feature-visual img {
+        height: 290px;
+      }
+
+      .feature-layout {
+        gap: 35px;
+      }
+
+      /* Approach becomes a vertical list on mobile */
+      .approach {
+        padding: 70px 0;
+      }
+
+      .approach-heading {
+        margin-bottom: 37px;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-step {
+        padding: 0 0 28px;
+      }
+
+      .approach-step + .approach-step {
+        padding: 28px 0;
+        border-left: none;
+        border-top: 1px solid #dce7ec;
+      }
+
+      .approach-step:last-child {
+        padding-bottom: 0;
+      }
+
+      .approach-step h3 {
+        margin-top: 16px;
+        font-size: 22px;
+      }
+
+      .approach-step p {
+        max-width: 100%;
+      }
+
+      .cta-panel {
+        padding: 45px 28px;
+      }
+
+      .cta-content h2 {
+        font-size: clamp(29px, 8vw, 38px);
+      }
+
+      .cta-content p {
+        font-size: 15px;
+      }
+
+      .cta-panel .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>
+        Construction accounting, financial intelligence and advisory
+      </span>
+
+      <div class="topbar-links">
+        <a href="insights.html">Insights</a>
+        <a href="/contact">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Pallium homepage">
+        <img
+          src="pal-logo.png"
+          alt="Pallium Construction Accountants"
+        >
+      </a>
+
+      <nav
+        class="nav"
+        id="main-nav"
+        aria-label="Main navigation"
+      >
+        <a href="index.html">Home</a>
+        <a href="who-we-help.html">Who We Help</a>
+
+        <a
+          href="how-we-help.html"
+          class="active"
+          aria-current="page"
+        >
+          How We Help
+        </a>
+
+        <a href="why-pallium.html">Why Pallium</a>
+        <a href="client-stories.html">Client Stories</a>
+        <a href="insights.html">Insights</a>
+
+        <a
+          href="/discovery-meeting"
+          class="btn btn-primary nav-mobile-cta"
+        >
+          Book a Discovery Meeting
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="/discovery-meeting" class="btn btn-primary">
+          Book a Discovery Meeting
+        </a>
+      </div>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="main-nav"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">How We Help</span>
+        </nav>
+
+        <h1>How We Help</h1>
+
+        <p>
+          Construction accounting, financial intelligence and
+          practical advisory to help you protect profitability,
+          strengthen cash flow and make better business decisions.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro-section">
+      <div class="container intro-layout">
+
+        <div class="intro-heading">
+          <span class="eyebrow">Beyond Traditional Accounting</span>
+
+          <h2 class="section-title">
+            Better financial visibility.
+            Stronger business decisions.
+          </h2>
+        </div>
+
+        <div class="intro-content">
+          <p class="section-description">
+            Construction businesses need more than accurate accounts.
+            They need to understand project performance, manage
+            cash flow and make informed commercial decisions.
+          </p>
+
+          <p class="section-description">
+            Pallium combines specialist construction accounting
+            with financial reporting and business advisory to
+            help you understand your numbers and use them
+            to move your business forward.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="container">
+
+        <div class="services-heading">
+          <span class="eyebrow">Our Services</span>
+
+          <h2 class="section-title">
+            Financial support built for construction.
+          </h2>
+
+          <p class="section-description">
+            From day-to-day accounting to project profitability
+            and long-term planning, our services help you maintain
+            financial control across your business.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- SERVICE 01 -->
+          <article class="service-card">
+            <span class="service-number">01</span>
+
+            <h3>Construction Accounting</h3>
+
+            <p>
+              Accurate financial reporting and accounting
+              tailored to the complexities of construction
+              businesses and project-based operations.
+            </p>
+
+            <a
+              href="/discovery-meeting"
+              class="text-link"
+              aria-label="Enquire about construction accounting"
+            >
+              Discuss this service
+            </a>
+          </article>
+
+          <!-- SERVICE 02 -->
+          <article class="service-card">
+            <span class="service-number">02</span>
+
+            <h3>Project Profitability &amp; Job Costing</h3>
+
+            <p>
+              Understand the true costs and margins of
+              your projects, identify cost overruns and
+              see where your business is making money.
+            </p>
+
+            <a
+              href="/discovery-meeting"
+              class="text-link"
+              aria-label="Enquire about project profitability and job costing"
+            >
+              Discuss this service
+            </a>
+          </article>
+
+          <!-- SERVICE 03 -->
+          <article class="service-card">
+            <span class="service-number">03</span>
+
+            <h3>Cash Flow &amp; Financial Forecasting</h3>
+
+            <p>
+              Plan for upcoming commitments, understand
+              your working capital requirements and
+              make financial decisions with greater confidence.
+            </p>
+
+            <a
+              href="/discovery-meeting"
+              class="text-link"
+              aria-label="Enquire about cash flow and financial forecasting"
+            >
+              Discuss this service
+            </a>
+          </article>
+
+          <!-- SERVICE 04 -->
+          <article class="service-card">
+            <span class="service-number">04</span>
+
+            <h3>Work in Progress &amp; Retentions</h3>
+
+            <p>
+              Gain visibility over work in progress,
+              progress claims and retentions to better
+              understand your financial position
+              across active projects.
+            </p>
+
+            <a
+              href="/discovery-meeting"
+              class="text-link"
+              aria-label="Enquire about work in progress and retentions"
+            >
+              Discuss this service
+            </a>
+          </article>
+
+          <!-- SERVICE 05 -->
+          <article class="service-card">
+            <span class="service-number">05</span>
+
+            <h3>Tax Planning &amp; Structuring</h3>
+
+            <p>
+              Plan for tax obligations and review
+              business structures with consideration
+              for your construction activities,
+              projects and longer-term objectives.
+            </p>
+
+            <a
+              href="/discovery-meeting"
+              class="text-link"
+              aria-label="Enquire about tax planning and structuring"
+            >
+              Discuss this service
+            </a>
+          </article>
+
+          <!-- SERVICE 06 -->
+          <article class="service-card">
+            <span class="service-number">06</span>
+
+            <h3>Financial Reporting &amp; Advisory</h3>
+
+            <p>
+              Turn financial information into practical
+              insights that support profitability,
+              commercial decisions and sustainable
+              business growth.
+            </p>
+
+            <a
+              href="/discovery-meeting"
+              class="text-link"
+              aria-label="Enquire about financial reporting and advisory"
+            >
+              Discuss this service
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINANCIAL INTELLIGENCE -->
+    <section class="feature-section">
+      <div class="container feature-layout">
+
+        <div class="feature-visual">
+          <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+            alt="Professional workspace for financial planning and business advisory"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="feature-content">
+          <span class="eyebrow">Financial Intelligence</span>
+
+          <h2 class="section-title">
+            Know your numbers.
+            Understand what they mean.
+          </h2>
+
+          <p class="section-description">
+            Financial reports should do more than show what
+            happened last month. They should help you understand
+            how your projects and business are performing
+            and where attention is needed.
+          </p>
+
+          <ul class="feature-points">
+            <li>Clear visibility of project and business profitability</li>
+            <li>Better understanding of cash flow and commitments</li>
+            <li>Practical insights to support commercial decisions</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OUR APPROACH — VERTICAL DIVIDERS -->
+    <section class="approach" id="our-approach">
+      <div class="container">
+
+        <div class="approach-heading">
+          <span class="eyebrow">Our Approach</span>
+
+          <h2 class="section-title">
+            From understanding your business
+            to making better decisions.
+          </h2>
+
+          <p class="section-description">
+            Our approach connects your financial information
+            with the practical realities of running
+            a construction business.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+
+          <!-- STEP 01 -->
+          <div class="approach-step">
+            <span class="step-number">01 / Understand</span>
+
+            <h3>Understand your business.</h3>
+
+            <p>
+              We start by understanding your projects,
+              financial position, commercial challenges
+              and business objectives.
+            </p>
+          </div>
+
+          <!-- STEP 02 -->
+          <div class="approach-step">
+            <span class="step-number">02 / Analyse</span>
+
+            <h3>Find the insights that matter.</h3>
+
+            <p>
+              We review the financial information
+              relevant to your business to identify
+              risks, opportunities and areas
+              requiring attention.
+            </p>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="approach-step">
+            <span class="step-number">03 / Advise</span>
+
+            <h3>Make informed decisions.</h3>
+
+            <p>
+              We turn financial insights into practical
+              advice that supports profitability,
+              cash flow and your next business decisions.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+      <div class="container">
+
+        <div class="cta-panel">
+
+          <div class="cta-content">
+            <span class="eyebrow">Work With Pallium</span>
+
+            <h2>
+              Ready to take greater control
+              of your construction business?
+            </h2>
+
+            <p>
+              Let's discuss your business, your financial
+              challenges and how Pallium can help you
+              move forward with greater clarity.
+            </p>
+          </div>
+
+          <a href="/discovery-meeting" class="btn btn-white">
+            Book a Discovery Meeting
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <a href="index.html" aria-label="Pallium homepage">
+            <img
+              src="pal-logo.png"
+              alt="Pallium Construction Accountants"
+              class="footer-logo"
+            >
+          </a>
+
+          <p class="footer-about">
+            Accountants built exclusively for construction
+            businesses. Construction accounting, financial
+            intelligence and business advisory for builders,
+            civil contractors, major trades and property developers.
+          </p>
+        </div>
+
+        <div>
+          <h4>Who We Help</h4>
+
+          <ul>
+            <li><a href="/builders">Builders</a></li>
+            <li><a href="/civil-contractors">Civil Contractors</a></li>
+            <li><a href="/trade-contractors">Trade Contractors</a></li>
+            <li><a href="/property-developers">Property Developers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Explore Pallium</h4>
+
+          <ul>
+            <li><a href="how-we-help.html">How We Help</a></li>
+            <li><a href="why-pallium.html">Why Pallium</a></li>
+            <li><a href="client-stories.html">Client Stories</a></li>
+            <li><a href="insights.html">Insights</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Get Started</h4>
+
+          <ul>
+            <li>
+              <a href="/discovery-meeting">
+                Book a Discovery Meeting
+              </a>
+            </li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>
+          © <span id="year">2026</span>
+          Pallium Construction Accountants.
+          All rights reserved.
+        </span>
+
+        <span>
+          Specialist accounting and advisory for construction.
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    /* Sticky header */
+    const header = document.getElementById("site-header");
+
+    function updateHeader() {
+      header.classList.toggle(
+        "scrolled",
+        window.scrollY > 30
+      );
+    }
+
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      { passive: true }
+    );
+
+    updateHeader();
+
+    /* Mobile navigation */
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.getElementById("main-nav");
+
+    function closeMenu() {
+      mainNav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open menu");
+      menuToggle.textContent = "☰";
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("is-open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1200) {
+        closeMenu();
+      }
+    });
+
+    /* Copyright year */
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
