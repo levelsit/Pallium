@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How We Help | Pallium Construction Accountants</title>
+  <meta name="description" content="Construction accounting, project profitability, cash flow forecasting, tax planning, CFO advisory and banking and finance support for construction businesses.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    /* Only hide content for animation when the browser can reveal it again */
+    if (
+      "IntersectionObserver" in window &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      document.documentElement.classList.add("js-anim");
+    }
+  </script>
+
+  <style>
+    /* =========================================
+       GLOBAL
+    ========================================= */
+
+    :root {
+      --navy: #103a5c;
+      --navy-dark: #0b2c47;
+      --blue: #0173a2;
+      --brand: #0189c0;
+      --blue-dark: #016188;
+      --sky: #a9dbe8;
+      --ivory: #faf9f6;
+      --light: #f4f8fa;
+      --text: #26343b;
+      --muted: #62717a;
+      --border: #e0e8eb;
+
+      --heading: "Manrope", sans-serif;
+      --body: "DM Sans", sans-serif;
+
+      --container: 1360px;
+      --gutter: clamp(22px, 5vw, 80px);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text);
+      font-family: var(--body);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, p {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(
+        calc(100% - var(--gutter) * 2),
+        var(--container)
+      );
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-family: var(--heading);
+      font-size: clamp(32px, 3.2vw, 46px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       BUTTONS
+    ========================================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 26px;
+      border: 1.5px solid transparent;
+      border-radius: 0;
+      font-family: var(--body);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+      border-color: var(--blue-dark);
+    }
+
+    .btn-white {
+      background: #fff;
+      border-color: #fff;
+      color: var(--navy);
+    }
+
+    .btn-white:hover {
+      background: var(--sky);
+      border-color: var(--sky);
+    }
+
+    /* =========================================
+       PAGE HERO
+    ========================================= */
+
+    .page-hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(11, 44, 71, .98) 0%,
+          rgba(11, 44, 71, .94) 45%,
+          rgba(11, 44, 71, .65) 100%
+        ),
+        url("site-wide.jpg")
+        center / cover no-repeat;
+    }
+
+    .page-hero-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 340px;
+      padding: 60px 0 70px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 26px;
+      color: rgba(255, 255, 255, .7);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .breadcrumb span:last-child {
+      color: var(--sky);
+    }
+
+    .page-hero h1 {
+      color: #fff;
+      font-family: var(--heading);
+      font-size: clamp(40px, 4vw, 58px);
+      font-weight: 800;
+      line-height: 1.13;
+      letter-spacing: -.05em;
+    }
+
+    .page-hero p {
+      max-width: 680px;
+      margin-top: 22px;
+      color: #d7e3e9;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       INTRODUCTION
+    ========================================= */
+
+    .intro-section {
+      padding: clamp(76px, 8vw, 115px) 0;
+      background: #fff;
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: start;
+      gap: clamp(40px, 7vw, 110px);
+    }
+
+    .intro-heading .eyebrow {
+      margin-bottom: 20px;
+    }
+
+    .intro-heading h2 {
+      max-width: 530px;
+    }
+
+    .intro-content {
+      max-width: 630px;
+      padding-top: 25px;
+    }
+
+    .intro-content p + p {
+      margin-top: 18px;
+    }
+
+    .services {
+      padding: clamp(76px, 8vw, 115px) 0;
+      background: var(--light);
+    }
+
+    .services-heading {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .services-heading .eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .services-heading .section-description {
+      max-width: 610px;
+      margin-top: 18px;
+    }
+
+    /* =========================================
+       FINANCIAL INTELLIGENCE
+    ========================================= */
+
+    .feature-section {
+      padding: clamp(76px, 8vw, 115px) 0;
+      background: #fff;
+    }
+
+    .feature-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(45px, 7vw, 110px);
+    }
+
+    .feature-visual img {
+      width: 100%;
+      height: clamp(390px, 36vw, 520px);
+      object-fit: cover;
+    }
+
+    .feature-content {
+      max-width: 580px;
+    }
+
+    .feature-content .eyebrow {
+      margin-bottom: 20px;
+    }
+
+    .feature-content .section-description {
+      margin-top: 24px;
+    }
+
+    .feature-points {
+      display: grid;
+      gap: 18px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .feature-points li::before {
+      content: "";
+      flex: 0 0 8px;
+      width: 8px;
+      height: 8px;
+      margin-top: 8px;
+      background: var(--blue);
+    }
+
+    /* =========================================
+       OUR APPROACH — VERTICAL DIVIDERS
+    ========================================= */
+
+    .approach {
+      padding: 85px 0 95px;
+      background: var(--ivory);
+    }
+
+    .approach-heading {
+      max-width: 850px;
+      margin-bottom: 48px;
+    }
+
+    .approach-heading .eyebrow {
+      margin-bottom: 15px;
+    }
+
+    .approach-heading .section-title {
+      max-width: 780px;
+      font-size: clamp(32px, 3.2vw, 44px);
+      line-height: 1.2;
+    }
+
+    .approach-heading .section-description {
+      max-width: 680px;
+      margin-top: 19px;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .approach-step {
+      min-width: 0;
+      padding: 6px 36px 8px 0;
+      border: none;
+    }
+
+    /* Vertical divider between steps */
+
+    .approach-step + .approach-step {
+      border-left: 1px solid #dce7ec;
+      padding-left: 36px;
+    }
+
+    .step-number {
+      display: block;
+      color: var(--blue);
+      font-family: var(--heading);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .07em;
+      line-height: 1.5;
+    }
+
+    .approach-step h3 {
+      margin-top: 22px;
+      color: var(--navy);
+      font-family: var(--heading);
+      font-size: clamp(20px, 1.65vw, 24px);
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -.035em;
+    }
+
+    .approach-step p {
+      max-width: 355px;
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       FINAL CTA
+    ========================================= */
+
+    .final-cta {
+      padding: clamp(76px, 8vw, 115px) 0;
+      background: #fff;
+    }
+
+    .cta-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 45px;
+      padding: clamp(45px, 5vw, 75px);
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .cta-content {
+      max-width: 720px;
+    }
+
+    .cta-content .eyebrow {
+      color: var(--sky);
+    }
+
+    .cta-content h2 {
+      margin-top: 18px;
+      color: #fff;
+      font-family: var(--heading);
+      font-size: clamp(30px, 3vw, 43px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+
+    .cta-content p {
+      max-width: 580px;
+      margin-top: 20px;
+      color: #d1dfe5;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .cta-panel .btn {
+      flex-shrink: 0;
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 960px) {
+      .intro-layout, .feature-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .intro-content {
+        padding-top: 0;
+      }
+
+      .feature-visual, .feature-content {
+        max-width: 760px;
+      }
+
+      .feature-visual img {
+        height: 420px;
+      }
+
+      .approach-step {
+        padding-right: 22px;
+      }
+
+      .approach-step + .approach-step {
+        padding-left: 22px;
+      }
+
+      .cta-panel {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .page-hero-inner {
+        min-height: 290px;
+        padding-block: 50px;
+      }
+
+      .page-hero h1 {
+        font-size: clamp(36px, 9vw, 46px);
+      }
+
+      .page-hero p {
+        font-size: 15px;
+      }
+
+      .intro-section, .services, .feature-section, .final-cta {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        font-size: clamp(30px, 8vw, 39px);
+      }
+
+      .section-description {
+        font-size: 15px;
+      }
+
+      .services-heading {
+        margin-bottom: 32px;
+      }
+
+      .feature-visual img {
+        height: 290px;
+      }
+
+      .feature-layout {
+        gap: 35px;
+      }
+
+      /* Approach becomes a vertical list on mobile */
+
+      .approach {
+        padding: 70px 0;
+      }
+
+      .approach-heading {
+        margin-bottom: 37px;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-step {
+        padding: 0 0 28px;
+      }
+
+      .approach-step + .approach-step {
+        padding: 28px 0;
+        border-left: none;
+        border-top: 1px solid #dce7ec;
+      }
+
+      .approach-step:last-child {
+        padding-bottom: 0;
+      }
+
+      .approach-step h3 {
+        margin-top: 16px;
+        font-size: 22px;
+      }
+
+      .approach-step p {
+        max-width: 100%;
+      }
+
+      .cta-panel {
+        padding: 45px 28px;
+      }
+
+      .cta-content h2 {
+        font-size: clamp(29px, 8vw, 38px);
+      }
+
+      .cta-content p {
+        font-size: 15px;
+      }
+
+      .cta-panel .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    /* =========================================
+       SERVICES: ONE FEATURED CARD ABOVE SIX
+    ========================================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      grid-column: span 3;
+      min-width: 0;
+      padding: 28px 26px 26px;
+      background: #fff;
+      border: 1px solid #dce7ec;
+      scroll-margin-top: 140px;
+      transition:
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+    }
+
+    .service-card:nth-child(1) {
+      grid-column: span 6;
+      padding: clamp(30px, 3vw, 42px);
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .service-card:nth-child(2),
+    .service-card:nth-child(3) {
+      grid-column: span 3;
+    }
+
+    .service-card:hover,
+    .service-card:focus-within {
+      transform: translateY(-4px);
+      border-color: var(--blue);
+      box-shadow: 0 16px 36px rgba(23, 51, 69, .1);
+    }
+
+    .service-card svg {
+      box-sizing: content-box;
+      width: 28px;
+      height: 28px;
+      padding: 12px;
+      background: #e6f3f9;
+      fill: none;
+      stroke: var(--blue-dark);
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card h3 {
+      margin-top: 22px;
+      color: var(--navy);
+      font-family: var(--heading);
+      font-size: clamp(19px, 1.45vw, 22px);
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -.03em;
+    }
+
+    .service-card p {
+      margin: 12px 0 24px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      min-height: 28px;
+      margin-top: auto;
+      color: var(--blue-dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* The whole card is clickable */
+    .service-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    .service-link span {
+      transition: transform .25s ease;
+    }
+
+    .service-card:hover .service-link span {
+      transform: translateX(5px);
+    }
+
+    /* Featured card */
+    .service-card:nth-child(1) svg {
+      background: rgba(255, 255, 255, .12);
+      stroke: var(--sky);
+    }
+
+    .service-card:nth-child(1) h3 {
+      color: #fff;
+      font-size: clamp(26px, 2.4vw, 34px);
+      letter-spacing: -.04em;
+    }
+
+    .service-card:nth-child(1) p {
+      max-width: 560px;
+      color: #d7e3e9;
+      font-size: 16px;
+    }
+
+    .service-card:nth-child(1) .service-link {
+      color: var(--sky);
+    }
+
+    .service-card:target {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 2px var(--blue);
+    }
+
+    @media (max-width: 1200px) {
+      .service-card,
+      .service-card:nth-child(2),
+      .service-card:nth-child(3) {
+        grid-column: span 6;
+      }
+
+      .service-card:nth-child(1) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .service-card,
+      .service-card:nth-child(1),
+      .service-card:nth-child(2),
+      .service-card:nth-child(3) {
+        grid-column: auto;
+      }
+
+      .service-card:nth-child(1) h3 {
+        font-size: 26px;
+      }
+
+      .service-card:nth-child(1) p {
+        font-size: 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .service-card:hover,
+      .service-card:focus-within {
+        transform: none;
+      }
+    }
+
+    /* =========================================
+       SCROLL ANIMATIONS (same timing as the Home page)
+       Uses opacity and translate so the existing
+       card hover transforms keep working.
+    ========================================= */
+
+    .js-anim .page-hero-inner > *, .js-anim .intro-heading, .js-anim .intro-content, .js-anim .services-heading, .js-anim .feature-visual, .js-anim .feature-content, .js-anim .approach-heading, .js-anim .approach-step, .js-anim .cta-panel {
+      opacity: 0;
+      translate: 0 28px;
+      transition:
+        opacity .9s cubic-bezier(.25,.1,.25,1) var(--reveal-delay, 0ms),
+        translate .9s cubic-bezier(.25,.1,.25,1) var(--reveal-delay, 0ms),
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+    }
+
+    .js-anim .intro-content, .js-anim .feature-content {
+      translate: 40px 0;
+    }
+
+    .js-anim .intro-heading, .js-anim .feature-visual {
+      translate: -40px 0;
+    }
+
+    @media (max-width: 960px) {
+      .js-anim .intro-content, .js-anim .feature-content, .js-anim .intro-heading, .js-anim .feature-visual {
+        translate: 0 24px;
+      }
+    }
+
+    .js-anim .is-visible.is-visible.is-visible {
+      opacity: 1;
+      translate: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+
+  <script src="header.js"></script>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">How We Help</span>
+        </nav>
+
+        <h1>How We Help</h1>
+
+        <p>
+          Construction accounting, financial intelligence and
+          practical advisory to help you protect profitability,
+          strengthen cash flow and make better business decisions.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro-section">
+      <div class="container intro-layout">
+
+        <div class="intro-heading">
+          <span class="eyebrow">Beyond Traditional Accounting</span>
+
+          <h2 class="section-title">
+            Better financial visibility.
+            Stronger business decisions.
+          </h2>
+        </div>
+
+        <div class="intro-content">
+          <p class="section-description">
+            Construction businesses need more than accurate accounts.
+            They need to understand project performance, manage
+            cash flow and make informed commercial decisions.
+          </p>
+
+          <p class="section-description">
+            Pallium combines specialist construction accounting
+            with financial reporting and business advisory to
+            help you understand your numbers and use them
+            to move your business forward.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="container">
+
+        <div class="services-heading">
+          <span class="eyebrow">Our Services</span>
+
+          <h2 class="section-title">
+            Financial support built for construction.
+          </h2>
+
+          <p class="section-description">
+            From day-to-day accounting to project profitability
+            and long-term planning, our services help you maintain
+            financial control across your business.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card" id="construction-accounting">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3h11l5 5v21H8z"/><path d="M19 3v5h5M12 15h8M12 20h8M12 25h5"/></svg>
+            <h3>Construction Accounting</h3>
+            <p>Construction-specific accounting, financial statements, tax returns, BAS, GST, payroll, superannuation and management reporting to keep your business compliant and financially informed.</p>
+            <a href="/discovery-meeting" class="service-link" aria-label="Discuss construction accounting">
+              Discuss this service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card" id="project-profitability">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 28V18M13 28V12M20 28v-9M27 28V6"/></svg>
+            <h3>Project Profitability &amp; Job Costing</h3>
+            <p>Understand the true costs and margins of your projects, identify cost overruns and see where your business is making money.</p>
+            <a href="/discovery-meeting" class="service-link" aria-label="Discuss project profitability and job costing">
+              Discuss this service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card" id="cash-flow-forecasting">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16a12 12 0 0 1 21-8l3 3"/><path d="M28 5v6h-6M28 16a12 12 0 0 1-21 8l-3-3"/><path d="M4 27v-6h6"/></svg>
+            <h3>Cash Flow &amp; Financial Forecasting</h3>
+            <p>Plan for upcoming commitments, understand your working capital requirements and make financial decisions with greater confidence.</p>
+            <a href="/discovery-meeting" class="service-link" aria-label="Discuss cash flow and financial forecasting">
+              Discuss this service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card" id="wip-retentions">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 4 12 6-12 6-12-6 12-6Z"/><path d="m4 16 12 6 12-6M4 22l12 6 12-6"/></svg>
+            <h3>Work in Progress &amp; Retentions</h3>
+            <p>Gain visibility over work in progress, progress claims and retentions to better understand your financial position across active projects.</p>
+            <a href="/discovery-meeting" class="service-link" aria-label="Discuss work in progress and retentions">
+              Discuss this service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card" id="tax-planning">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 27 7v8c0 7-4.6 12-11 14C9.6 27 5 22 5 15V7l11-4Z"/><path d="m11 16 3.5 3.5L21 13"/></svg>
+            <h3>Tax Planning &amp; Structuring</h3>
+            <p>Plan for tax obligations and review business structures with consideration for your construction activities, projects and longer-term objectives.</p>
+            <a href="/discovery-meeting" class="service-link" aria-label="Discuss tax planning and structuring">
+              Discuss this service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card" id="cfo-advisory">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="m21 11-3 7-7 3 3-7 7-3Z"/></svg>
+            <h3>CFO &amp; Strategic Advisory</h3>
+            <p>Virtual CFO services, management reporting, financial forecasts, working capital management and strategic advice to support stronger financial performance and sustainable growth.</p>
+            <a href="/discovery-meeting" class="service-link" aria-label="Discuss CFO and strategic advisory">
+              Discuss this service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card" id="banking-finance">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 12 16 5l12 7H4ZM7 12v12M13 12v12M19 12v12M25 12v12M4 28h24"/></svg>
+            <h3>Banking &amp; Finance Support</h3>
+            <p>We help construction businesses prepare financial information for lenders, assess funding requirements, forecast cash flow and understand their debt servicing capacity to support informed financing decisions.</p>
+            <a href="/discovery-meeting" class="service-link" aria-label="Discuss banking and finance support">
+              Discuss this service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINANCIAL INTELLIGENCE -->
+    <section class="feature-section" id="financial-intelligence">
+      <div class="container feature-layout">
+
+        <div class="feature-visual">
+          <img
+            src="financial-review.jpg"
+            alt="Project managers reviewing job budgets and financial reports"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="feature-content">
+          <span class="eyebrow">Financial Intelligence</span>
+
+          <h2 class="section-title">
+            Know your numbers.
+            Understand what they mean.
+          </h2>
+
+          <p class="section-description">
+            Financial reports should do more than show what
+            happened last month. They should help you understand
+            how your projects and business are performing
+            and where attention is needed.
+          </p>
+
+          <ul class="feature-points">
+            <li>Clear visibility of project and business profitability</li>
+            <li>Better understanding of cash flow and commitments</li>
+            <li>Practical insights to support commercial decisions</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OUR APPROACH — VERTICAL DIVIDERS -->
+    <section class="approach" id="our-approach">
+      <div class="container">
+
+        <div class="approach-heading">
+          <span class="eyebrow">Our Approach</span>
+
+          <h2 class="section-title">
+            From understanding your business
+            to making better decisions.
+          </h2>
+
+          <p class="section-description">
+            Our approach connects your financial information
+            with the practical realities of running
+            a construction business.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+
+          <!-- STEP 01 -->
+          <div class="approach-step">
+            <span class="step-number">01 / Understand</span>
+
+            <h3>Understand your business.</h3>
+
+            <p>
+              We start by understanding your projects,
+              financial position, commercial challenges
+              and business objectives.
+            </p>
+          </div>
+
+          <!-- STEP 02 -->
+          <div class="approach-step">
+            <span class="step-number">02 / Analyse</span>
+
+            <h3>Find the insights that matter.</h3>
+
+            <p>
+              We review the financial information
+              relevant to your business to identify
+              risks, opportunities and areas
+              requiring attention.
+            </p>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="approach-step">
+            <span class="step-number">03 / Advise</span>
+
+            <h3>Make informed decisions.</h3>
+
+            <p>
+              We turn financial insights into practical
+              advice that supports profitability,
+              cash flow and your next business decisions.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+      <div class="container">
+
+        <div class="cta-panel">
+
+          <div class="cta-content">
+            <span class="eyebrow">Work With Pallium</span>
+
+            <h2>
+              Ready to take greater control
+              of your construction business?
+            </h2>
+
+            <p>
+              Let's discuss your business, your financial
+              challenges and how Pallium can help you
+              move forward with greater clarity.
+            </p>
+          </div>
+
+          <a href="/discovery-meeting" class="btn btn-white">
+            Book a Discovery Meeting
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="footer.js"></script>
+
+  <script>
+    /* Reveal content as it scrolls into view */
+    if (document.documentElement.classList.contains("js-anim")) {
+      const revealItems = document.querySelectorAll([
+        ".page-hero-inner > *",
+        ".intro-heading",
+        ".intro-content",
+        ".services-heading",
+        ".service-card",
+        ".feature-visual",
+        ".feature-content",
+        ".approach-heading",
+        ".approach-step",
+        ".cta-panel"
+      ].join(","));
+
+      /* Stagger items that sit side by side, one after another */
+      revealItems.forEach(item => {
+        const position = Array.prototype.indexOf.call(
+          item.parentElement.children,
+          item
+        );
+
+        item.style.setProperty(
+          "--reveal-delay",
+          Math.min(position * 110, 440) + "ms"
+        );
+      });
+
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+
+              /* Remove the delay afterwards so hover stays instant */
+              window.setTimeout(() => {
+                entry.target.style.removeProperty("--reveal-delay");
+              }, 2000);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+      );
+
+      revealItems.forEach(item => revealObserver.observe(item));
+    }
+  </script>
+
+</body>
+</html>
